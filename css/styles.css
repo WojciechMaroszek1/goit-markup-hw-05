@@ -243,10 +243,7 @@ section {
 	border-radius: 4px;
 
 	position: absolute;
-	top: 0;
-	left: 0;
 	margin-top: 221px;
-	margin-left: 536px;
 }
 .backdrop {
 	width: 100%;
@@ -254,6 +251,8 @@ section {
 	position: fixed;
 	top: 0;
 	left: 0;
+	display: flex;
+	justify-content: center;
 	background: rgba(0, 0, 0, 0.2);
 	transition-property: visibility, opacity, transform;
 	transition-duration: 700ms;
