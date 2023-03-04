@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="witdh=device-width" />
-		<title>goit-markup-hw-04 Wojciech Maroszek</title>
+		<title>goit-markup-hw-05 Wojciech Maroszek</title>
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
@@ -23,8 +23,8 @@
 					</a>
 					<ul class="nav-list">
 						<li><a class="nav-link current" href="./index.html">Agencja</a></li>
-						<li><a class="nav-link" href="./portfolio.html">Portfolio</a></li>
-						<li><a class="nav-link" href="./kontakt.html">Kontakty</a></li>
+						<li><a class="nav-link nav-link-center" href="./portfolio.html">Portfolio</a></li>
+						<li><a class="nav-link nav-link-center" href="#">Kontakty</a></li>
 					</ul>
 				</nav>
 				<ul class="contact-list">
@@ -51,7 +51,14 @@
 			<section class="hero-background">
 				<div class="container">
 					<h1 class="hero-header">EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU</h1>
-					<button class="hero-button" type="button">Zamów usługę</button>
+					<button data-modal-open class="hero-button" type="button">Zamów usługę</button>
+					<div class="backdrop is-hidden" data-modal>
+						<div class="modal">
+							<button class="modal-btn-bg" data-modal-close>
+								<svg class="modal-btn"><use href="./images/icons.svg#icon-close"></use></svg>
+							</button>
+						</div>
+					</div>
 				</div>
 			</section>
 			<section>
@@ -103,16 +110,25 @@
 			</section>
 			<section class="deal-design">
 				<div class="container">
-					<h2 class="design-header deal-title">Czym się zajmujemy</h2>
+					<h2 class="design-header">Czym się zajmujemy</h2>
 					<ul class="deal-box">
 						<li>
-							<img src="images/box1.jpg" alt="Zdjęcie komputera" width="370" height="294" />
+							<div class="deal-image-box">
+								<img src="images/box1.jpg" alt="Zdjęcie komputera" width="370" height="294" />
+								<div class="deal-text-box"><p>Aplikacje komputerowe</p></div>
+							</div>
 						</li>
 						<li>
-							<img src="images/box2.jpg" alt="Zdjęcie komputera i telefonu" width="370" height="294" />
+							<div class="deal-image-box">
+								<img src="images/box2.jpg" alt="Zdjęcie komputera i telefonu" width="370" height="294" />
+								<div class="deal-text-box"><p>Aplikacje mobilne</p></div>
+							</div>
 						</li>
 						<li>
-							<img src="images/box3.jpg" alt="Zdjęcie tabletu" width="370" height="294" />
+							<div class="deal-image-box">
+								<img src="images/box3.jpg" alt="Zdjęcie tabletu" width="370" height="294" />
+								<div class="deal-text-box"><p>Rozwiązania graficzne</p></div>
+							</div>
 						</li>
 					</ul>
 				</div>

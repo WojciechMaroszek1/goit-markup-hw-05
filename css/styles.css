@@ -21,6 +21,7 @@ body {
 .cursor-pointer:hover {
 	cursor: pointer;
 }
+
 .visually-hidden {
 	position: absolute;
 	width: 1px;
@@ -137,6 +138,8 @@ section {
 	letter-spacing: 0.02em;
 	display: block;
 	padding-top: 32px;
+}
+.nav-link-center {
 	padding-bottom: 32px;
 }
 .nav-link:hover {
@@ -168,6 +171,12 @@ section {
 }
 .current {
 	color: var(--main-blue-color);
+}
+.current::after {
+	content: "";
+	display: block;
+	border-bottom: 4px solid var(--main-blue-color);
+	padding-bottom: 28px;
 }
 .icon-envelope {
 	margin-right: 10px;
@@ -220,7 +229,52 @@ section {
 	margin: auto;
 	padding: 12px 42px;
 }
+.is-hidden {
+	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
+	transform: scale(0);
+}
+.modal {
+	width: 528px;
+	height: 581px;
+	background-color: var(--main-background-color);
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
 
+	position: absolute;
+	top: 0;
+	left: 0;
+	margin-top: 221px;
+	margin-left: 536px;
+}
+.backdrop {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background: rgba(0, 0, 0, 0.2);
+	transition-property: visibility, opacity, transform;
+	transition-duration: 700ms;
+}
+.modal-btn {
+	width: 18px;
+	height: 18px;
+	display: flex;
+	align-items: center;
+}
+.modal-btn-bg {
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: 0;
+	margin-top: 8px;
+	margin-right: 8px;
+
+	border-radius: 50%;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+}
 /* Header index.html */
 /* Section 1 index.html */
 .feat-text-box {
@@ -267,6 +321,25 @@ section {
 }
 .deal-design {
 	padding-top: 0px;
+}
+.deal-image-box {
+	position: relative;
+}
+.deal-text-box {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	background-color: rgba(47, 48, 58, 0.8);
+	padding: 27px 0px;
+}
+.deal-text-box > p {
+	font-weight: 700;
+	color: var(--main-background-color);
+	font-size: 14px;
+	line-height: 1.14em;
+	text-align: center;
+	letter-spacing: 0.03em;
+	text-transform: uppercase;
 }
 /* Section 2 index.html */
 /* Section 3 index.html */
@@ -412,13 +485,50 @@ section {
 	color: var(--images-font-color);
 	letter-spacing: 0.03em;
 }
-.images-container:hover {
+.images-container {
 	width: 370px;
+	position: relative;
+}
+
+.image-box {
+	width: 370px;
+	height: 294px;
+	position: relative;
+	overflow: hidden;
+}
+.overlay {
+	background-color: rgba(33, 150, 243, 0.9);
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateY(100%);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.overlay > p {
+	font-family: var(--main-font);
+	color: var(--main-background-color);
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 1.55em;
+	letter-spacing: 0.03em;
+	padding: 49px 24px 0px 24px;
+}
+
+.images-container:hover .overlay {
+	transform: translateY(0%);
+}
+.images-container:hover {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .images-container:focus {
 	width: 370px;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.images-container:focus .overlay {
+	transform: translateY(0%);
 }
 .images-box-text {
 	width: 370px;
