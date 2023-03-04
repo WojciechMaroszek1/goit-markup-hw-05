@@ -260,8 +260,6 @@ section {
 .modal-btn {
 	width: 18px;
 	height: 18px;
-	display: flex;
-	align-items: center;
 }
 .modal-btn-bg {
 	width: 30px;
@@ -271,8 +269,13 @@ section {
 	margin-top: 8px;
 	margin-right: 8px;
 
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
 	border-radius: 50%;
 	border: 1px solid rgba(0, 0, 0, 0.1);
+	background-color: var(--main-background-color);
 }
 /* Header index.html */
 /* Section 1 index.html */
