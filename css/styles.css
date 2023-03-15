@@ -139,7 +139,7 @@ section {
 	display: block;
 	padding-top: 32px;
 	position: relative;
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .nav-link-center {
 	padding-bottom: 32px;
@@ -162,7 +162,7 @@ section {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-link2:hover {
@@ -423,7 +423,8 @@ section {
 	justify-content: center;
 	border-radius: 50%;
 	fill: #afb1b8;
-	transition: transform 400ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Section 3 index.html */
 /* Section 4 index.html */
@@ -442,7 +443,7 @@ section {
 	align-items: center;
 	justify-content: center;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.2);
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .customer-bg:focus {
 	color: var(--main-blue-color);
@@ -477,7 +478,8 @@ section {
 	letter-spacing: 0.03em;
 	padding: 6px 22px;
 
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+		color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover {
 	background-color: var(--main-blue-color);
@@ -515,6 +517,8 @@ section {
 .images-container {
 	width: 370px;
 	position: relative;
+	display: block;
+	transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .image-box {
@@ -551,7 +555,6 @@ section {
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .images-container:focus {
-	width: 370px;
 	box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .images-container:focus .overlay {
@@ -597,7 +600,7 @@ section {
 	letter-spacing: 0.03em;
 	display: block;
 
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-adress:hover {
 	color: var(--main-blue-color);
@@ -641,7 +644,7 @@ section {
 	align-items: center;
 	justify-content: center;
 	border-radius: 50%;
-	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-bg:hover {
 	background-color: var(--main-blue-color);
